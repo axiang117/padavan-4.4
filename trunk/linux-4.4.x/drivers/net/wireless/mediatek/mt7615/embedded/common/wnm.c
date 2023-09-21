@@ -1664,7 +1664,7 @@ static VOID SendBTMQueryIndication(
 	BTM_EVENT_DATA *Event = (BTM_EVENT_DATA *)Elem->Msg;
 	PNET_DEV NetDev = pAd->ApCfg.MBSSID[Event->ControlIndex].wdev.if_dev;
 
-	printk("%s\n", __func__);
+	//printk("%s\n", __func__);
 		/* Send BTM query indication to daemon */
 		SendBTMQueryEvent(NetDev,
 						  Event->PeerMACAddr,
@@ -1694,8 +1694,8 @@ VOID WaitPeerBTMReqTimeout(
 	BOOLEAN Cancelled;
 #endif /* CONFIG_11KV_API_SUPPORT */
 
-	MTWF_LOG(DBG_CAT_PROTO, CATPROTO_WNM, DBG_LVL_OFF,
-		("%s\n", __func__));
+	//MTWF_LOG(DBG_CAT_PROTO, CATPROTO_WNM, DBG_LVL_OFF,
+	//	("%s\n", __func__));
 
 	if (!BTMPeerEntry)
 		return;
